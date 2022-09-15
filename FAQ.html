@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<title>The Church of Mack</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title> Web Page Banner</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="bannerimage">
+                <b id = "bannertext">The Church of Mack</b>
+            </div>
+        </a>
+    </header>
+<!--- Code for the navigation bar directing users to each page  
+      But this updates for the current page-->
+    <div class ="navbar">
+        <a href ='History.html'> History</a>
+        <a href = "whereismack.html"> Where's Mack?</a>               
+        <a id = "currentpage" href = 'FAQ.html'> <strong>FAQ</strong></a>
+        <a href = 'testimonials.html'> Testimonials</a>
+        <a href = 'Merch.html'> Merch</a>
+    </div>
+
+    <div class="backgroundimage">
+
+        <h1><br><b> Frequently Asked Questions </b></h1>
+        <!---Each block is a question with its associated answer. The question is defined as a collapsible which can be clicked to expand and see the answer-->
+        <div class = "textbox textbox-FAQ">
+
+            <button class="collapsible"><b>Question:</b><br> Does it cost anything to join the church?</button>
+            <div class="answer">
+                <p><b>Answer:</b><br> Nope! It's completely free!</p>
+            </div>
+
+            <button type="button" class="collapsible"><b>Question:</b><br> My child is not a Mack believer, is there a cure for this condition?</button>
+            <div class="answer">
+                <p><b>Answer:</b><br> Absolutely! Trade in your child for a small dog. All dogs worship Mack.</p>
+            </div>
+
+            <button type="button" class="collapsible"><b>Question:</b><br> Where do I donate?</button>
+            <div class="answer">
+                <p><b>Answer:</b><br> We don't accept donations, but we do have a merchandise store that you can get to by using the navigation bar at the top of the page.</p>
+            </div>
+
+            <button type="button" class="collapsible"><b>Question:</b><br> What are the fundamental practices of the religion?</button>
+            <div class="answer">
+                <p><b>Answer:</b><br>Followers of the religion are encouraged to pet any and all dogs they can. If a follower is able to adopt a dog themselves, they must do so.
+                    If a follower owns a dog they must take it to the vet twice a year minimum, and give it belly rubs on the 
+                    daily. Finally, followers must leave a dog treat on their beside table each night before going to sleep.</p>
+            </div>
+
+            <button type="button" class="collapsible"><b>Question:</b><br> How do i get Mack senpai to notice me uwu?</button>
+            <div class="answer">
+                <p><b>Answer:</b><br> The scriptures say that if you crinkle a bag of dog treats 10 minutes before midnight that Mack will appear before you and bark. You may regret this.</p>
+            </div>
+
+            <button type="button" class="collapsible"><b>Question:</b><br> I have been living as a heathen for my whole life, how do i go about seeking atonement for my past sins and embrace Mack as the one true god?</button>
+            <div class="answer">
+                <p><b>Answer:</b><br> First, take a deep breath, then scream, absolutely belt out the words "it is what it is" until you're out of breath. After that, light a candle and say "good pup" 3 times. You will be cleansed.</p>
+            </div>
+        </div>
+    </div>
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
+<!---This page could theoretically have the FAQ listed on both sides of the page to save on space,
+     but it is intended to be a bit of a rabbit hole and so directing the user in the correct opening position is better here.
+    Also, javascript imports are done at the bottom to collect information on all collapsible elements after DOM.-->
+    

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<title>The Church of Mack</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title> Web Page Banner</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<!---This is here to allow the assigning of correct prices if users decide to use the back button in the checkout. Otherwise it would default to 0 in all rows-->
+<body onload="return calculatePaymentTotal();">
+    <header>
+        <a href="index.html">
+            <div class="bannerimage">
+                <b id = "bannertext">The Church of Mack</b>
+            </div>
+        </a>
+    </header>
+<!--- Code for the navigation bar directing users to each page  
+      But this updates for the current page (In this case checkout does not have it own button so its parent is marked)-->
+    <div class ="navbar">
+        <a href ='History.html'> History</a>
+        <a href = "whereismack.html"> Where's Mack?</a>               
+        <a href = 'FAQ.html'> FAQ</a>
+        <a href = 'Testimonials.html'> Testimonials</a>
+        <a id = "currentpage" href = 'Merch.html'> <strong>Merch</strong></a>
+    </div>
+
+    <div class="backgroundimage">
+        <h1><br><b> Checkout </b></h1>
+
+        <!---textbox for the sectioning of each input field set. Each container provided here is one row of the page containing input fields for information.-->
+        <!---Placeholders are provided in each input to indicate what kind of information users should be putting in-->
+            <div class="textbox textbox-checkout">
+
+            <i><b>Personal Information</b></i><br>
+
+            </div>
+
+            <div class="container container-checkout">
+
+                <div class="item">
+
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" class="inputformat" id="fullname" name="fullname" placeholder="Your Name Here">
+
+                </div>
+
+                <div class="item">
+
+                    <label for="email"> Email: </label>
+                    <input type="text" class="inputformat" id="email" name="email" placeholder="mackrox@gmail.com">
+
+                </div>
+
+            </div>
+                
+
+            <div class="container container-checkout">
+
+                <div class="item">
+
+                    <label for="streetno"> Street Number:</label>
+                    <input type="text" class="inputformat" id="streetno" name="streetno" placeholder="56">
+
+                </div>
+
+                <div class="item">
+
+                    <label for="streetname">Street Name:</label>
+                    <input type="text" class="inputformat" id="streetname" name="streetname" placeholder="Starfish Cr">
+
+                </div>
+
+            </div>
+
+            <div class="container container-checkout">
+
+                <div class="item">
+                    <label for="suburb">Suburb:</label>
+                    <input type="text" class="inputformat" id="suburb" name="suburb" placeholder="Milton">
+                </div>
+
+                <div class="item">
+                    <label for="postcode">Post Code:</label>
+                    <input type="text" class="inputformat" id="postcode" name="postcode" placeholder="4000">
+                </div>
+
+            </div>
+
+            <!---Section for payment details and payment types, radio buttons used for payment type to ensure one is selected only-->
+            <div class="textbox textbox-checkout">
+            <i><b>Payment Details</b></i><br>
+            <b>Select Payment Type</b>
+            </div>
+
+            <div class="container">
+
+                <div class="item ">
+                    MasterBark
+                    <input class="inputformat" type="radio" name="card" id = "cardoption1" ></input>
+                </div>
+
+                <div class="item">
+                    Cheesa
+                    <input class="inputformat" type="radio" name="card" id = "cardoption2" ></input>
+                </div>
+
+                <div class="item">
+                    Debit Card
+                    <input class="inputformat" type="radio" name="card" id = "cardoption3" ></input>
+                </div>
+
+            </div>
+
+            <div class="container container-checkout">
+
+                <div class="item">
+                    <label for="cardno">Card Number:</label>
+                    <input type="number" class="inputformat" id="cardno" name="cardno" placeholder="123456-789-012-3456">
+                </div>
+
+                <div class="item">
+                    <label for="cardexp">Card Expiry:</label>
+                    <input type="text" class="inputformat" id="cardexp" name="cardexp" placeholder="12/23">
+                </div>
+            </div>
+
+
+            <div class="container container-checkout">
+
+                <div class="item">
+                    <label for="cardname">Cardholder Name:</label>
+                    <input type="text" class="inputformat" id="cardname" name="cardname" placeholder="Billy Bob">
+                </div>
+
+                <div class="item">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" class="inputformat" id="cvv" name="cvv" placeholder="112">
+                </div>
+            </div>
+
+            <!--- Postage type selection row is here, radio buttons used to ensure only one is selected --->
+
+            <div class="textbox textbox-checkout">
+                Express Postage 1-2 days delivery: $11 <input class = "postage inputformat" type="radio" id="expresspost" name="postage">
+                <br>
+                Standard Postage 4-5 days delivery: $5 <input class= "postage inputformat" type="radio" id="standardpost" name="postage">
+
+
+            </div>
+            <!--- This is the back button for returning to the merchandise page -->
+
+            <div class="container container-checkout">
+
+                <div class="item">
+                    <button class="backbutton" value="back" onclick="history.back()"><b>Back</b></button>
+                </div>
+
+                <div class="item">
+                    <!---Provides the total cost with postage included-->
+                    <p class= totalcost> <br>Total Cost: $  <span id="ordertotal"></span></p> 
+
+                </div>
+
+                <!---Element with the payment button hidden text which is controlled through javascript-->
+                <div class="item">
+
+                    <button class="paymentbutton" onclick="remove(this); "><b>Pay</b></button>
+                    
+                    <div id = "hidden" class="rainbowText">
+                        <b>Mack has personally declined your order. Sorry Pal.</b>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+</body>
+</html>

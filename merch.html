@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<title>The Church of Mack</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Web Page Banner</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<header>
+    <a href="index.html">
+        <div class="bannerimage">
+            <b id = "bannertext">The Church of Mack</b>
+        </div>
+    </a>
+</header>
+
+<body onload= "return calculateTotal();">
+
+<!--- Code for the navigation bar directing users to each page  
+      But this updates for the current page-->
+    <div class ="navbar">
+        <a href ='History.html'> History</a>
+        <a href = "whereismack.html"> Where's Mack?</a>               
+        <a href = 'FAQ.html'> FAQ</a>
+        <a href = 'Testimonials.html'> Testimonials</a>
+        <a id = "currentpage" href = 'Merch.html'> Merch</a>
+    </div>
+
+        <div class="backgroundimage">
+            <h1><br><b> Merchandise </b></h1>
+
+            <div class = "container">
+                <h2 class = "item">Item</h2>
+                <h2 class = "item">Description</h2>
+                <h2 class = "item">Quantity</h2>
+                <h2 class = "item">Cost</h2>
+            </div>
+
+            <!---Each container is a row for an item in the merch store consisting of an item with name and price, description, quantity, and calculated cost-->
+            <div class="container">
+
+                <div class="item">
+
+                    <p id = "pricing"><b>Strand of Mack Hair: </b>$420</p>
+                    <img id = "itemimage" src = "images/mackhair.png" length = 50%, width = 50%>
+
+                </div>
+
+                <div class="descriptionbox">
+                    <p id = "pricing"><br><br><b> This is a single strand of Mack's luscious locks, come get 'em before he becomes a rat.</b></p>
+                </div>
+
+                <div class="item">
+                    <!---Each counter is a quantity selector with input field and buttons-->
+                    <div class="counter">
+
+                        <span onClick='decreaseCount(event, this)'>-</span>
+                        <input type="number" class = "qty" id="qty_hair"  value="0" oninput="this.value = Math.abs(this.value)"> 
+                        <span onClick='increaseCount(event, this)'>+</span>
+
+                    </div>
+
+                </div>    
+                <!---totalcost provides the cost of the item*quantity for each item-->
+                <div class="item">
+                    <div class="itemcost">
+                        <p class="totalcost">$</p><input id = "price_hair" type = "number" readonly value ="0">
+                    </div>
+                </div>  
+
+            </div>
+
+            <div class="container">
+
+                <div class="item">
+                    <p id = "pricing"><b>Mack Poster: </b>$15</p>
+                    <img id = "itemimage" src = "images/mackposter.png" length = 50%, width = 50%>
+                </div>
+
+                <div class="descriptionbox">
+                    <p id = "pricing"><br><br><b>A wall poster depicting the great and powerful Mack™ receiving a belly rub from his disciple</b></p>
+                </div>
+
+                <div class="item">
+                    <div class="counter">
+                        <span onClick='decreaseCount(event, this)'>-</span>
+                        <input type="number" class = "qty" id="qty_poster"  value="0" oninput="this.value = Math.abs(this.value)"> 
+                        <span onClick='increaseCount(event, this)'>+</span>
+                    </div>
+                </div>      
+
+                <div class="item">
+                    <div class="itemcost">
+                        <p class="totalcost">$</p><input id = "price_poster" type = "number" readonly value ="0">
+                    </div>                    
+                </div>  
+
+            </div>
+
+            <div class="container">
+
+                <div class="item">
+                    <p id = "pricing"><b>Mack Keyring: </b>$7</p>
+                    <img id = "itemimage" src = "images/mackkeyring.png" length = 50%, width = 50%>
+                </div>
+
+                <div class="descriptionbox">
+                    <p id = "pricing"><br><br><b>A key ring depicting a concerned Mack™</b></p>
+                </div>
+
+                <div class="item">
+                    <div class="counter">
+                        <span onClick='decreaseCount(event, this)'>-</span>
+                        <input type="number" class = "qty" id="qty_keyring"  value="0" oninput="this.value = Math.abs(this.value)"> 
+                        <span onClick='increaseCount(event, this)'>+</span>
+                    </div>
+                </div>   
+
+                <div class="item">
+                    <div class="itemcost">
+                        <p class="totalcost">$</p><input id = "price_keyring" type = "number" readonly value ="0">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class = "container">
+
+                <div class="item">
+                    <p id = "pricing"><b>Mack Autograph: </b>$777</p>
+                    <img class = "popup_image" id = "itemimage" src = "images/mackautograph.png" length = 50%, width = 50%>
+                </div>
+
+                <div class="descriptionbox">
+                    <p id = "pricing"><br><br><b>A paw print placed upon paper by Mack™ himself</b></p>
+                </div> 
+
+                <div class="item">
+                    <div class="counter">
+                        <span onClick='decreaseCount(event, this)'>-</span>
+
+                        <input type="number" class = "qty" id="qty_autograph"  value="0" oninput="this.value = Math.abs(this.value)"> 
+                        <!-- Input defined to accept only positive numbers by correcting any negative numbers. Done to avoid input of "-" character.-->
+
+                        <span onClick='increaseCount(event, this)'>+</span>
+                    </div>
+
+                </div>   
+
+                <div class="item">
+                    <div class="itemcost">
+                        <p class="totalcost">$</p><input id = "price_autograph" type = "number" readonly value ="0">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class = "container">
+
+                <!---Empty item slots are used to create blank space while maintaining the overall layout-->
+                <div class="item item-empty">
+                </div>
+
+                <div class="item item-empty">
+                </div>  
+
+                <!---The total cost box-->
+                <div class="item item-cost">
+                    <p class= totalcost>Total Cost: $  <span id="total_value">0</span></p>
+
+                </div>
+
+                <!---insertion of the checkout button-->
+                <div class="item">
+                    <a href = "checkout.html">
+                        <button class="checkout">Checkout</button>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+</body>
+</html>

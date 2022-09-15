@@ -1,0 +1,856 @@
+
+
+/* The main styles defined here are with desktop users in mind.
+   Dynamic rules are set using a media selector below these.*/
+
+html, body{
+  height: 100%;
+  width: 100%;
+  margin:0;
+  padding:0;
+  background: skyblue;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200,200,200);
+  letter-spacing: 1px;
+  font-size: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+td, th {
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 20px;
+  max-width: 30rem;
+}
+
+th {
+  background-color: white;
+
+}
+
+td {
+  background-color: white;
+  text-align: center;
+}
+
+
+
+
+
+
+
+/* The styling used for pages containing blocks of text which need to be visible on the many coloured background
+*/
+.textbox{
+  background-color: rgb(255, 255, 255, 0.9);
+  padding: 10px;
+  height: 20ef;
+  margin-top: 10px;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-size: xx-large;
+  text-align: center;
+}
+
+
+/* An alternate version of textbox used for the FAQ page.
+*/
+.textbox-FAQ{
+    text-align: left;
+    background-color: rgb(102, 102, 102, 0);
+    padding-right: 20px;
+}
+
+/* one of two alternate versions of textbox used for the testimonials page.
+*/ 
+.textbox-testimonialsleft{
+  background-color: rgb(127, 215, 222, 0.9);
+  text-align: left;
+  margin-left:20%;
+  margin-right:20%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 150px;
+  padding-bottom:20px;
+  padding-top:20px;
+}
+
+/* one of two alternate versions of textbox used for the testimonials page.
+*/ 
+.textbox-testimonialsright{
+  margin-top: 0;
+  margin-bottom:0;
+  margin-left:20%;
+  margin-right:20%;
+  background-color: rgb(127, 215, 222, 0.9);
+  text-align: right;
+  padding-left:150px;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+/* An alternate version of textbox used for the checkout page.
+*/
+.textbox-checkout{
+  background-color: white;
+  border-left: solid black 2px;
+  border-right: solid black 2px;
+  border-top: solid black 2px;
+  text-align: center;
+  padding-top:10px;
+  margin-top:0;
+  margin-left: 100px;
+  margin-right: 100px;
+  
+}
+
+
+/* Rules to change h1 used for headings on each page*/
+h1{
+  margin-top: 0px;
+  padding-top: 0px;
+  text-decoration: solid;
+  text-align: center;
+  font-family: Open Sans;
+  color: white;
+  font-weight: 900;
+  font-size: 65px;
+  text-shadow: 2px 2px black;
+}
+
+/* Modification to h2 used for the merchandise page for column titles */
+h2{
+  margin-top: 0px;
+  padding-top: 0px;
+  text-decoration: solid;
+  text-align: center;
+  font-family: Open Sans;
+  color: black;
+  font-weight: 900;
+  font-size: 40px;
+  text-shadow: 1px 1px grey;
+}
+
+/* Setting rules specifically for the main background image of mack running*/
+
+
+.backgroundimage{
+  display: block;
+  background: url(../images/mackrunchurch.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  min-width: 100%;
+  min-height: 100%;
+  min-width: 1800px;
+  max-width: 1800px;
+  margin: auto;
+}
+
+
+/* Setting rules specifically for the banner image */
+
+.bannerimage{
+  background-image:url(../images/mackbanner.png);
+  background-size:100% 100%;
+  background-color: black;
+  height:15vw;
+  width:auto;
+  margin:0;
+  padding: 0;
+  min-width: 1800px;
+  max-width: 1800px;
+  min-height: 380px;
+  max-height: 380px;
+  margin: auto;
+  color: white;
+}
+
+
+/* Setting rules specifically for the text on the banner */
+#bannertext{
+  font-size: 85px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: absolute;
+  padding-top: 280px;
+  padding-left: 420px;
+  text-align: right;
+  text-shadow: black 5px 5px;
+  overflow: hidden;
+  min-width: 900px;
+}
+
+
+/* Styling for the navigation bar */
+.navbar {
+  overflow:hidden;
+  background-color: black;
+  font-family: Open Sans;
+  text-align: center;
+  min-width: 1800px;
+  max-width: 1800px;
+  margin:auto;}
+/* Styling for elements of the navigation bar */
+
+.navbar a{
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+/* Style for mouse hovering over navbar elements*/
+.navbar a:hover{
+  transition: 0.2s linear;
+  background: gray;
+}
+
+/* Style for activation of navbar elements*/
+.navbar a:active{
+  background-color: black;
+  transform: translateY(4px);
+}
+
+/* Style for the navbar element corresponding to the current page*/
+#currentpage {
+  font-size: 2em;
+  color: black;
+  text-align: center;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background-color: white;
+}
+
+/* Style for the learn more button on the homepage*/
+
+.floating-button{
+  display: inline-block;
+  padding: 1.1em;
+  font-size: 25px;
+  cursor: pointer;
+  font-family: Open Sans;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  border: 1px, black;
+  border-radius: 25px;
+  position: static;
+  box-shadow: 0 3px #90917E;
+  margin-left: 25%;
+  margin-top: 20%;
+  box-shadow: 2px 2px black;
+  font-size: 30px;
+  transition: all 0.2s linear;
+}
+
+/* Style for hovering over the learn more button*/
+.floating-button:hover{
+  transition: 0.2s linear;
+  background: rgb(124, 224, 193);
+}
+
+/* Style for activating the button*/
+.floating-button:active {
+  background-color: white;
+  box-shadow:1px #666;
+  transform: translateY(5px);
+}
+
+
+/* Style for the checkout button on the merchandise page*/
+.checkout{
+  display: inline-block;
+  font-size: 45px;
+  cursor: pointer;
+  font-family: Open Sans;
+  text-align: center;
+  text-decoration: none;
+  background-color: green;
+  border: 1px, black;
+  border-radius: 25px;
+  position: absolute;
+  left : 20%;
+  bottom: 30%;
+  box-shadow: 0 3px #90917E;
+  transition: all 0.2s linear;
+}
+/* Style for hovering over the button*/
+
+.checkout:hover{
+  background: greenyellow;
+}
+/* Style for clicking the button*/
+
+.checkout:active {
+  transition: 0.2s linear;
+  background-color: green;
+  box-shadow:1px #666;
+  transform: translateY(5px);
+}
+
+
+/*Flexbox container used for merchandise rows*/
+.container{
+  border-top: solid black 2px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+}
+
+
+/*Style for each individual box within containers*/
+.item{
+  border-left: solid black 2px;
+  border-right: solid black 2px;
+  flex-grow: 1;
+  width: 375px;
+  max-width: 50%;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  position: relative;
+  font-size: 30px;
+}
+/*Style used to create empty space in the container while maintaining the form*/
+.item-empty{
+opacity: 0%;;
+}
+
+/* Style to modify border details of the total cost box to maintain aesthetics on the merchandise page*/
+.item-cost{
+border-left: solid black 4px;
+}
+
+/* Style to format the description box in merchandise */
+.descriptionbox{
+  border-left: solid black 2px;
+  border-right: solid black 2px;
+  flex-grow: 1;
+  width: 375px;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  position: relative;
+  }
+
+/* Id dictating formatting of images in merchandise */
+#itemimage{
+  border: solid black 2px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+
+/* ID for the formatting of name and price above the images in merchanadise */
+
+#pricing{
+  font-size: xx-large;
+  text-align: center;
+  overflow:hidden;
+  content: '';
+  pointer-events: none;
+}
+
+
+/*Style to remove the up and down arrows from number input fields*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; 
+}
+
+/*Style for quantity counter elements*/
+.counter {
+  width: 150px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30%;
+  background-color: white;
+  
+}
+
+
+/*Style for quantity counter input fields*/
+
+.counter input {
+  max-width: 5vw;
+  max-height: 5vw;
+  min-width: 3vw;
+  min-height: 3vw;
+  height: 50px;
+  border: black solid 1px;
+  line-height: 30px;
+  font-size: 1.8vw;
+  text-align: center;
+  background: white;
+  color: black;
+  appearance: none;
+  outline: 0;
+  margin: 10px;
+}
+
+
+/*Style for quantity counter buttons*/
+.counter span{
+  background-color: white;
+  display: block;
+  border-radius: 50%;
+  border: black solid 1px;
+  font-size: 30px;
+  padding: 1% 6%;
+  cursor: pointer;
+  color:black;
+  user-select: none;
+  text-shadow: 1px 1px black;
+  transition: all 0.4s linear;
+}
+
+.counter span:hover{
+  transition: 0.1s linear;
+  background-color: gray;
+}
+/*Style for clicking of quantity buttons */
+.counter span:active{
+  background-color: grey;
+  box-shadow:1px #666;
+  transform: translateY(2px);
+}
+
+/*Style for quantity*item cost field*/
+.itemcost {
+  width: 150px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30%;
+  background-color: white;
+}
+
+
+/*Style for the cost input box*/
+.itemcost input {
+  width: 150px;
+  height: 50px;
+  border: none;
+  line-height: 30px;
+  font-size: 35px;
+  text-align: center;
+  background: white;
+  color: black;
+  appearance: none;
+  outline: 0;
+  margin: 10px;
+}
+
+
+/* Font size for the $ sign nex to the cost number */
+.totalcost {
+  font-size: 40px;
+}
+
+/*Style for collapsible boxes in the FAQ page */
+.collapsible{
+    transition: all 0.2s linear;
+    color: #444;
+    cursor: pointer;
+    padding: none;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 30px;
+    border: solid black 2px;
+    border-bottom: none;
+    background-color: rgb(255, 255, 255, 1);
+    margin-top: 5px;
+    content: '\02795';
+    padding-right:3px;
+}
+
+/*Style for hovering over FAQ questions*/
+.active, .collapsible:hover {
+    transition: 0.2s linear;
+    background-color: rgb(155, 255, 255, 1);
+}
+
+/*Style for clicking FAQ questions*/
+.collapsible:active{
+    transform: translateY(4px);
+}
+
+/*Style for collapsibles while collapsed or expanded, swapping out + and - symbols*/
+.collapsible:after{
+    content: '\02795';
+    font-size: 13px;
+    color: black;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2796"; 
+  }
+
+  /*Style for the expanded content from a collapsible*/
+.answer {
+    padding: 0 20px;
+    overflow: hidden;
+    background-color: white;
+    max-height: 0;
+    border: solid black 2px;
+    transition: max-height 0.2s ease-in;
+    font-size: 30px;
+}
+
+.answer:hover{
+  transition: 40s linear;
+  background-color: red;
+}
+
+
+/*Style for radio buttons for payment type in checkout*/
+.card{
+  size: 100% 100%;
+  width: 100%;
+  height: 100px;
+}
+
+/*Formatting for input fields in checkout */
+.inputformat{
+  margin: 10px;
+  font-size: 30px;
+  border:none;
+}
+
+/*Formatting for the checkout Payment button*/
+.paymentbutton{
+float: right;
+margin-top: 100px;
+width:50%;
+height: 100px;
+font-size: 40px;
+background-color: green;
+border: solid black 2px;
+box-shadow: black 2px 2px;
+transition: all 0.2s linear;
+}
+
+/*Formatting for the checkout Back button*/
+.backbutton{
+width:50%;
+height: 100px;
+font-size: 40px;
+float: left;
+margin-top:100px;
+background-color: rgb(168, 27, 27);
+border: solid black 2px;
+box-shadow: black 2px 2px;
+transition: all 0.2s linear;
+}
+
+/*Formatting for hovering over the Back button*/
+.backbutton:hover{
+  transition: 0.2s linear;
+  background-color: rgb(190, 94, 94);
+}
+
+/*Formatting for hovering over the payment button*/
+.paymentbutton:hover{
+  transition: 0.2s linear;
+  background-color: lightgreen;
+}
+
+
+/*Format for clicking the back button*/
+.backbutton:active{
+  background-color: rgb(168, 27, 27);
+  transform:translateY(4px);
+}
+
+/*Format for clicking the payment button*/
+.paymentbutton:active{
+  background-color: green;
+  transform:translateY(4px);
+}
+
+/*Id to identify the hidden text in the checkout page which appear when pay is clicked*/
+#hidden {
+  font-size: 40px;
+  width: 100%;
+  padding: 45px 0;
+  text-align: center;
+  background-color: none;
+  display:none;
+  margin: 0%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+  background-image:linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+  animation: move 66s linear infinite;
+}
+
+/*This enables the animated rainbow text that appears after clicking the pay button in checkout.*/
+@keyframes move {
+	to {
+		background-position: -4000vh;
+	}
+}
+
+
+
+
+
+
+
+
+/* 
+The media tag here is used to detect screen sizes lower than would be intended for the desktop view of this website.
+From here, i tried to make all measurements dynamic for use on a range of mobile and tablet screen sizes.
+These are all modifications of any static width used for the desktop version of the website.
+*/
+
+@media only screen and (max-width: 1000px) {
+
+  .bannerimage{
+    max-width: 100vw;
+    max-height: 50vh;
+    min-width: 30vw;
+    min-height: 20vh;
+  }
+  #bannertext{
+    font-size: clamp(3vh, 4vh, 6vh);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    padding-top: 15vh;
+    padding-left: 5vw;
+    text-align: right;
+    text-shadow: black 5px 5px;
+    overflow: hidden;
+    min-width: 50vw;
+  }
+  
+  .backgroundimage{
+    max-width: 100vw;
+    min-width: 50vw;
+    margin: 0;
+  }
+
+  .navbar{
+    max-width: 100vw;
+    min-width: 50vw;
+    min-height:2vh;
+  }
+  .navbar a{
+    font-size: 3vw;
+    padding-top: 50px;
+  }
+
+  #currentpage{
+    font-size: 3vw;
+    padding-top: 50px;
+  }
+
+  .floating-button{
+    font-size: 3vw;    
+  }
+
+  h1{
+    font-size: 8vw;
+  }
+
+  .textbox{
+    margin: 1vw;
+    font-size: 6vw;
+    text-align: left;
+  }
+
+  .collapsible{
+    font-size: 5vw;
+  }
+
+  .answer{
+    font-size: 5vw;
+  }
+
+  .textbox{
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 5vw;
+  }
+
+  .textbox-testimonialsleft{
+    padding-right: 10vw;
+    font-size: 5vw;
+  }
+
+  .textbox-testimonialsright{
+    padding-left: 10vw;
+    font-size: 5vw;
+  }
+
+
+
+  .container{
+    margin: auto;
+    padding: 0;
+    justify-content:stretch;
+    border-right: solid black 2px;
+  }
+
+  .item{
+    width: 23%;
+    min-width: 23%;
+    max-width: 23%;
+    font-size: 4vw;
+    padding: 0;
+    margin: 0;
+    font-size: 4vw;
+    min-height: 4vh;
+    border-right: none;
+    min-height: 10vw;
+    transition: all 0.2s linear;
+  }
+  .item:hover{
+    transition: 0.2s linear;
+    background-color: black;
+  }
+  .descriptionbox{
+    min-width: 23vw;
+    max-width: 23vw;
+    margin: 0;
+    padding: 0;
+    font-size: 1vw;
+  }
+  .counter{
+    width: 6vw;
+  }
+
+  .counter input{
+    width: 10vw;
+    height: 10vh;
+    min-width: 4vw;
+    max-height: 4vh;
+    font-size: 4vw;
+  }
+
+  .counter span{
+    text-shadow: none;
+  }
+
+  .itemcost{
+    width:23vw;
+    font-size: 5vw;
+    padding: 0;
+    min-width: 23vw;
+    max-width: 23vw;
+
+  }
+
+  .totalcost{
+    font-size: 4vw;
+    padding: 0;
+    margin: 0;
+  }
+
+  #pricing{
+    font-size: 4vw;
+  }
+
+
+
+  #price_hair, #price_poster, #price_autograph, #price_keyring{
+    padding: 0;
+    margin: 0;
+    width: 14vw;
+    font-size: 4vw;
+    text-align: left;
+  }
+
+  .checkout{
+    display: inline-block;
+    width: 20vw;
+    height: 6vw;
+    font-size: 4vw;
+    padding: 0;
+    margin: 0;
+
+  }
+
+  #itemimage{
+    width: 90%;
+  }
+
+
+  .textbox-checkout{
+    padding-left: 20vw;
+    margin: 0;
+  }
+
+
+  #hidden{
+    font-size: 7vw;
+    padding: 0;
+  }
+
+  .container-checkout{
+    max-width:100%;
+    justify-content:space-evenly;
+    padding: 0;
+  }
+
+  .inputformat{
+    margin: 0px;
+    font-size: 7vw;
+    border:none;
+  }
+
+
+  .container-checkout>.item{
+    min-width: 99vw;
+    padding-left: 2px;
+  }
+
+  label{
+    font-size: 6vw;
+  }
+
+
+  .inputformat{
+    width: 20;
+  }
+
+
+  .paymentbutton{
+    width:100vw;
+    font-size: 7vw;
+    margin-right:0;
+    }
+    
+  .backbutton{
+    width:40vw;
+    height: 20vw;
+    font-size: 7vw;
+    margin-top:1vh;
+    margin-left: 2vw;
+    float:right;
+    }
+
+    #ordertotal{
+      font-size: 4vw;
+      width: 20vw;
+    }
+}
